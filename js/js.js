@@ -9,4 +9,11 @@ window.onload = () => {
     };
 
     api = new JitsiMeetExternalAPI(domain, options);
+    api.executeCommand('displayName', 'JEFF');
+
+    api.on('readyToClose', () => {
+        console.log('Nao se va!!!!!!!!!!!!');
+        api.dispose();
+        window.location = 'https://www.vipsolutions.com.br';
+    });
 };
