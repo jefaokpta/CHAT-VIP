@@ -1,7 +1,21 @@
+var params = new URLSearchParams(window.location.href);
+var room;
+params.forEach(p => {
+    room = p;
+});
+
+if(!localStorage.getItem('vipRoom')){
+    if (!room) {
+        alert('SALA NAO IDENTIFICADA, ADEUS');
+        window.location = 'https://www.vipsolutions.com.br';
+    }
+}
+
 window.onload = () => {
     domain = 'meet.jit.si';
+
     options = {
-        roomName: '100-VIP-CHAT',
+        roomName: localStorage.getItem('vipRoom'),
         //width: 700,
         height: 800,
         interfaceConfigOverwrite: interfaceConfig,
@@ -9,11 +23,20 @@ window.onload = () => {
     };
 
     api = new JitsiMeetExternalAPI(domain, options);
-    api.executeCommand('displayName', 'JEFF');
+    // api.executeCommands({
+    //     displayName: 'JEFONES'
+    // });
+    //api.executeCommand('displayName', 'JEFFAO');
 
     api.on('readyToClose', () => {
         console.log('Nao se va!!!!!!!!!!!!');
         api.dispose();
+        localStorage.removeItem('vipRoom');
         window.location = 'https://www.vipsolutions.com.br';
     });
+
+    // setTimeout(() => {
+    //     console.log('SETANDO SENHA');
+    //     api.executeCommand('password', 'jefao123');
+    // }, 60000);
 };
