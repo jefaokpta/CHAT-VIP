@@ -3,7 +3,7 @@ var room;
 params.forEach(p => {
     room = p;
 });
-console.log(room)
+console.log('SALA!!!!!  -  '+room)
 if(localStorage.getItem('vipRoom')){
     room = localStorage.getItem('vipRoom');
 }
