@@ -4,7 +4,7 @@ params.forEach(p => {
     room = p;
 });
 
-if(!localStorage.getItem('vipRoom')){
+if(localStorage.getItem('vipRoom')){
     room = localStorage.getItem('vipRoom');
 }
 
