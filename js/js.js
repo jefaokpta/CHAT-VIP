@@ -5,17 +5,19 @@ params.forEach(p => {
 });
 
 if(!localStorage.getItem('vipRoom')){
-    if (!room) {
+    room = localStorage.getItem('vipRoom');
+}
+
+if (!room) {
         alert('SALA NAO IDENTIFICADA, ADEUS');
         window.location = 'https://www.vipsolutions.com.br';
     }
-}
 
 window.onload = () => {
     domain = 'meet.jit.si';
 
     options = {
-        roomName: localStorage.getItem('vipRoom'),
+        roomName: room,
         //width: 700,
         height: 800,
         interfaceConfigOverwrite: interfaceConfig,
