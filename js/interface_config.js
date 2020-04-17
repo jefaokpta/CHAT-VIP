@@ -120,7 +120,7 @@ var interfaceConfigGuest = {
      *
      * @type {boolean}
      */
-    MOBILE_APP_PROMO: true,
+    MOBILE_APP_PROMO: false,
 
     /**
      * Maximum coeficient of the ratio of the large video to the visible area
@@ -134,7 +134,7 @@ var interfaceConfigGuest = {
      * If indicated some of the error dialogs may point to the support URL for
      * help.
      */
-    SUPPORT_URL: 'https://community.jitsi.org/',
+    SUPPORT_URL: 'https://www.vipsolutions.com.br',
 
     /**
      * Whether the connection indicator icon should hide itself based on
@@ -389,7 +389,7 @@ var interfaceConfigModerator = {
      *
      * @type {boolean}
      */
-    MOBILE_APP_PROMO: true,
+    MOBILE_APP_PROMO: false,
 
     /**
      * Maximum coeficient of the ratio of the large video to the visible area
@@ -403,7 +403,7 @@ var interfaceConfigModerator = {
      * If indicated some of the error dialogs may point to the support URL for
      * help.
      */
-    SUPPORT_URL: 'https://community.jitsi.org/',
+    SUPPORT_URL: 'https://www.vipsolutions.com.br',
 
     /**
      * Whether the connection indicator icon should hide itself based on
