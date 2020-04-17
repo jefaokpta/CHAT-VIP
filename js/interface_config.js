@@ -120,7 +120,7 @@ var interfaceConfigGuest = {
      *
      * @type {boolean}
      */
-    MOBILE_APP_PROMO: true,
+    MOBILE_APP_PROMO: false,
 
     /**
      * Maximum coeficient of the ratio of the large video to the visible area
@@ -389,7 +389,7 @@ var interfaceConfigModerator = {
      *
      * @type {boolean}
      */
-    MOBILE_APP_PROMO: true,
+    MOBILE_APP_PROMO: false,
 
     /**
      * Maximum coeficient of the ratio of the large video to the visible area
