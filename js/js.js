@@ -8,6 +8,7 @@ params.forEach(p => { // se o participante vem de fora do VIP a sala precisa con
 
 if(localStorage.getItem('vipRoom')){ // se o participante vem do VIP
     room = localStorage.getItem('vipRoom');
+    localStorage.removeItem('vipRoom');
     moderator = true;
 }
 
@@ -41,12 +42,14 @@ window.onload = () => {
     api.on('readyToClose', () => {
         console.log('Nao se va!!!!!!!!!!!!');
         api.dispose();
-        localStorage.removeItem('vipRoom');
         window.location = 'https://www.vipsolutions.com.br';
     });
-
-    setTimeout(() => {
-        console.log('SETANDO SENHA');
-        api.executeCommand('password', 'jefao123');
-    }, 60000);
+    
+    if (localStorage.getItem('passwordRoom')) {
+        setTimeout(() => {
+            console.log('SETANDO SENHA');
+            api.executeCommand('password', localStorage.getItem('passwordRoom'));
+            localStorage.removeItem('passwordRoom');
+        }, 30000);
+    }
 };
