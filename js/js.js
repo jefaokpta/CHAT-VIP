@@ -45,8 +45,8 @@ window.onload = () => {
         window.location = 'https://www.vipsolutions.com.br';
     });
 
-    // setTimeout(() => {
-    //     console.log('SETANDO SENHA');
-    //     api.executeCommand('password', 'jefao123');
-    // }, 60000);
+    setTimeout(() => {
+        console.log('SETANDO SENHA');
+        api.executeCommand('password', 'jefao123');
+    }, 60000);
 };
