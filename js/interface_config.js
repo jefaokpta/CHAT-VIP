@@ -17,7 +17,7 @@ var interfaceConfigGuest = {
     DEFAULT_REMOTE_DISPLAY_NAME: 'Fulano Indefinido',
     DEFAULT_LOCAL_DISPLAY_NAME: 'Eu',
     SHOW_JITSI_WATERMARK: false,
-    JITSI_WATERMARK_LINK: 'https://jitsi.org',
+    JITSI_WATERMARK_LINK: '',
 
     // if watermark is disabled by default, it can be shown only for guests
     SHOW_WATERMARK_FOR_GUESTS: false,
@@ -276,7 +276,7 @@ var interfaceConfigModerator = {
     DEFAULT_REMOTE_DISPLAY_NAME: 'Fulano Indefinido',
     DEFAULT_LOCAL_DISPLAY_NAME: 'Eu',
     SHOW_JITSI_WATERMARK: false,
-    JITSI_WATERMARK_LINK: 'https://jitsi.org',
+    JITSI_WATERMARK_LINK: '',
 
     // if watermark is disabled by default, it can be shown only for guests
     SHOW_WATERMARK_FOR_GUESTS: false,
@@ -311,7 +311,7 @@ var interfaceConfigModerator = {
         'fodeviceselection', 'hangup', 'profile', 'chat',
         'etherpad', 'settings', 'raisehand',
         'videoquality', 'filmstrip', 'invite', 'feedback', 'stats', 'shortcuts',
-        'tileview', 'help', 'mute-everyone'
+        'tileview', 'help', 'mute-everyone', 'recording'
     ],
     /*
     Retirado de TOOLBAR_BUTTONS

@@ -26,7 +26,7 @@ window.onload = () => {
         height: 720,
         configOverwrite: {
             remoteVideoMenu: { disableKick: !moderator }, // NAO CHUTA OUTROS
-            disableRemoteMute: !moderator // NAO MUTA OUTROS
+            disableRemoteMute: !moderator, // NAO MUTA OUTROS
         },
         interfaceConfigOverwrite: moderator? interfaceConfigModerator: interfaceConfigGuest,
         parentNode: document.querySelector('#meet'),
