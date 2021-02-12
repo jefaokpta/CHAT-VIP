@@ -56,8 +56,8 @@ var interfaceConfigGuest = {
     TOOLBAR_BUTTONS: [
         'microphone', 'camera', 'closedcaptions', 'desktop', 'fullscreen',
         'fodeviceselection', 'hangup', 'profile', 'chat', 'settings', 'raisehand',
-        'videoquality', 'filmstrip', 'invite', 'feedback', 'stats', 'shortcuts',
-        'tileview', 'download', 'help', 'mute-everyone'
+        'videoquality', 'filmstrip', 'feedback', 'stats', 'shortcuts',
+        'tileview', 'download', 'help', 'mute-everyone', 'etherpad'
     ],
     // SETTINGS_SECTIONS: [ 'devices', 'language', 'moderator', 'profile', 'calendar' ],
     SETTINGS_SECTIONS: [ 'devices', 'language', 'profile' ],
@@ -310,7 +310,7 @@ var interfaceConfigModerator = {
         'microphone', 'camera', 'closedcaptions', 'desktop', 'fullscreen',
         'fodeviceselection', 'hangup', 'profile', 'chat',
         'etherpad', 'settings', 'raisehand',
-        'videoquality', 'filmstrip', 'invite', 'feedback', 'stats', 'shortcuts',
+        'videoquality', 'filmstrip', 'feedback', 'stats', 'shortcuts',
         'tileview', 'help', 'mute-everyone', 'recording'
     ],
     /*
