@@ -17,7 +17,7 @@ var interfaceConfigGuest = {
     DEFAULT_REMOTE_DISPLAY_NAME: 'Fulano Indefinido',
     DEFAULT_LOCAL_DISPLAY_NAME: 'Eu',
     SHOW_JITSI_WATERMARK: false,
-    JITSI_WATERMARK_LINK: 'https://jitsi.org',
+    JITSI_WATERMARK_LINK: '',
 
     // if watermark is disabled by default, it can be shown only for guests
     SHOW_WATERMARK_FOR_GUESTS: false,
@@ -56,8 +56,8 @@ var interfaceConfigGuest = {
     TOOLBAR_BUTTONS: [
         'microphone', 'camera', 'closedcaptions', 'desktop', 'fullscreen',
         'fodeviceselection', 'hangup', 'profile', 'chat', 'settings', 'raisehand',
-        'videoquality', 'filmstrip', 'invite', 'feedback', 'stats', 'shortcuts',
-        'tileview', 'download', 'help', 'mute-everyone'
+        'videoquality', 'filmstrip', 'feedback', 'stats', 'shortcuts',
+        'tileview', 'download', 'help', 'mute-everyone', 'etherpad'
     ],
     // SETTINGS_SECTIONS: [ 'devices', 'language', 'moderator', 'profile', 'calendar' ],
     SETTINGS_SECTIONS: [ 'devices', 'language', 'profile' ],
@@ -276,7 +276,7 @@ var interfaceConfigModerator = {
     DEFAULT_REMOTE_DISPLAY_NAME: 'Fulano Indefinido',
     DEFAULT_LOCAL_DISPLAY_NAME: 'Eu',
     SHOW_JITSI_WATERMARK: false,
-    JITSI_WATERMARK_LINK: 'https://jitsi.org',
+    JITSI_WATERMARK_LINK: '',
 
     // if watermark is disabled by default, it can be shown only for guests
     SHOW_WATERMARK_FOR_GUESTS: false,
@@ -310,8 +310,8 @@ var interfaceConfigModerator = {
         'microphone', 'camera', 'closedcaptions', 'desktop', 'fullscreen',
         'fodeviceselection', 'hangup', 'profile', 'chat',
         'etherpad', 'settings', 'raisehand',
-        'videoquality', 'filmstrip', 'invite', 'feedback', 'stats', 'shortcuts',
-        'tileview', 'help', 'mute-everyone'
+        'videoquality', 'filmstrip', 'feedback', 'stats', 'shortcuts',
+        'tileview', 'help', 'mute-everyone', 'recording'
     ],
     /*
     Retirado de TOOLBAR_BUTTONS

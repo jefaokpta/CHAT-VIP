@@ -8,6 +8,7 @@ params.forEach(p => { // se o participante vem de fora do VIP a sala precisa con
 
 if(localStorage.getItem('vipRoom')){ // se o participante vem do VIP
     room = localStorage.getItem('vipRoom');
+    localStorage.removeItem('vipRoom');
     moderator = true;
 }
 
@@ -17,7 +18,7 @@ if (!room) { // se só caiu no endereco
     }
 
 window.onload = () => {
-    domain = 'meet.jit.si';
+    domain = 'meet.jpbx.com.br';
 
     options = {
         roomName: room,
@@ -25,7 +26,7 @@ window.onload = () => {
         height: 720,
         configOverwrite: {
             remoteVideoMenu: { disableKick: !moderator }, // NAO CHUTA OUTROS
-            disableRemoteMute: !moderator // NAO MUTA OUTROS
+            disableRemoteMute: !moderator, // NAO MUTA OUTROS
         },
         interfaceConfigOverwrite: moderator? interfaceConfigModerator: interfaceConfigGuest,
         parentNode: document.querySelector('#meet'),
@@ -41,12 +42,14 @@ window.onload = () => {
     api.on('readyToClose', () => {
         console.log('Nao se va!!!!!!!!!!!!');
         api.dispose();
-        localStorage.removeItem('vipRoom');
         window.location = 'https://www.vipsolutions.com.br';
     });
-
-    // setTimeout(() => {
-    //     console.log('SETANDO SENHA');
-    //     api.executeCommand('password', 'jefao123');
-    // }, 60000);
+    
+    if (localStorage.getItem('passwordRoom')) {
+        setTimeout(() => {
+            console.log('SETANDO SENHA');
+            api.executeCommand('password', localStorage.getItem('passwordRoom'));
+            localStorage.removeItem('passwordRoom');
+        }, 30000);
+    }
 };
