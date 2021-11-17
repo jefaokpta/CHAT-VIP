@@ -18,7 +18,7 @@ if (!room) { // se só caiu no endereco
     }
 
 window.onload = () => {
-    domain = 'meet.jpbx.com.br';
+    domain = 'meet-test.vipsolutions.com.br';
 
     options = {
         roomName: room,
