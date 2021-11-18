@@ -1,6 +1,6 @@
-var params = new URLSearchParams(window.location.href);
-var room;
-var moderator = false;
+const params = new URLSearchParams(window.location.href);
+let room;
+let moderator = false;
 
 params.forEach(p => { // se o participante vem de fora do VIP a sala precisa constar na URL
     room = p;
@@ -18,26 +18,19 @@ if (!room) { // se só caiu no endereco
     }
 
 window.onload = () => {
-    domain = 'meet-test.vipsolutions.com.br';
+    const domain = 'meet-test.vipsolutions.com.br';
 
-    options = {
+    const options = {
         roomName: room,
-        //width: 700,
         height: 720,
-        configOverwrite: {
-            remoteVideoMenu: { disableKick: !moderator }, // NAO CHUTA OUTROS
-            disableRemoteMute: !moderator, // NAO MUTA OUTROS
+        configOverwrite: moderator ? configsModerator : configsGuest,
+        interfaceConfigOverwrite: {
+            JITSI_WATERMARK_LINK: 'https://www.jpbx.com.br',
         },
-        interfaceConfigOverwrite: moderator? interfaceConfigModerator: interfaceConfigGuest,
         parentNode: document.querySelector('#meet'),
     };
 
-    api = new JitsiMeetExternalAPI(domain, options);
-
-    // api.executeCommands({
-    //     displayName: 'JEFONES'
-    // });
-    //api.executeCommand('displayName', 'JEFFAO');
+    const api = new JitsiMeetExternalAPI(domain, options);
 
     api.on('readyToClose', () => {
         console.log('Nao se va!!!!!!!!!!!!');
