@@ -18,7 +18,8 @@ if (!room) { // se só caiu no endereco
     }
 
 window.onload = () => {
-    const domain = 'meet-test.vipsolutions.com.br';
+    const domain = 'meet.jit.si';
+    // const domain = 'meet-test.vipsolutions.com.br';
 
     const options = {
         roomName: room,
@@ -37,7 +38,7 @@ window.onload = () => {
         api.dispose();
         window.location = 'https://www.vipsolutions.com.br';
     });
-    
+
     if (localStorage.getItem('passwordRoom')) {
         setTimeout(() => {
             console.log('SETANDO SENHA');
