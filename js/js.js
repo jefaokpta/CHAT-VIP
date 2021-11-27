@@ -19,11 +19,12 @@ if (!room) { // se só caiu no endereco
 
 window.onload = () => {
     const domain = 'meet.jit.si';
-    // const domain = 'meet-test.vipsolutions.com.br';
+
+    const alturaTela = window.innerHeight < 720 ? 720 : window.innerHeight;
 
     const options = {
         roomName: room,
-        height: 720,
+        height: alturaTela,
         configOverwrite: moderator ? configsModerator : configsGuest,
         interfaceConfigOverwrite: {
             JITSI_WATERMARK_LINK: 'https://www.jpbx.com.br',
